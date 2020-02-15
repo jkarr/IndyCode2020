@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Pwned Password",
+            "url": "${workspaceFolder}/Creating a User Authentication Story/BreachedPasswordSample/index.html",
+			"webRoot": "${workspaceFolder}/Creating a User Authentication Story"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Login Page",
+            "url": "${workspaceFolder}/Creating a User Authentication Story/LoginPageSample/index.html",
+            "webRoot": "${workspaceFolder}/Creating a User Authentication Story"
+        }
+    ]
+}

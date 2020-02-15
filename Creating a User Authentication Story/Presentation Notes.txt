@@ -1,0 +1,11 @@
+How Secure Is My Password Library:  
+Example: https://passwordsecurity.info
+GitHub: https://github.com/technonerdz/passwordsecurity.info 
+
+Troy Hunt's Pwned Passwords api:
+Blog Post: https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/
+API: https://haveibeenpwned.com/API/v2#PwnedPasswords
+Blog post on password strength indicators: https://www.troyhunt.com/password-strength-indicators-help-people-make-dumb-choices/
+
+LastPass:
+https://lastpass.com/f?18260122

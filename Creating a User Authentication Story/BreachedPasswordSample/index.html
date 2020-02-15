@@ -1,0 +1,46 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <input type="password" id="password" />
+    <input type="button" id="button" value="submit" />
+    <div id="result"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="sha1.js"></script>
+
+    <script>
+        $(function () {
+            $("#button").on("click", function () {
+                var sha = sha1($("#password").val()).toUpperCase();
+                var prefix = sha.substring(0, 5);
+                var suffix = sha.substring(5, sha.length);
+
+                $.ajax({
+                    url: "https://api.pwnedpasswords.com/range/" + prefix
+                }).done(function (response) {
+                    var hashes = response.split('\n');
+                    var breached = false;
+
+                    for (let i = 0; i < hashes.length; i++) {
+                        var hash = hashes[i];
+                        var h = hash.split(':');
+                        if (h[0] === suffix) {
+                            $("#result").html("The password has been breached " + h[1] + " times.");
+                            breached = true;
+                            break;
+                        }
+                    }
+
+                    if (!breached) {
+                        $("#result").html("The password has not been breached.");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
